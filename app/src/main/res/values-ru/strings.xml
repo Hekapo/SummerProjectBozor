@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Menu -->
+    <string name="menu_shop">Магаин</string>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_list">Список</string>
+    <string name="registration_username">Имя пользователя</string>
+    <string name="registration_password">Пароль</string>
+    <string name="registration_confirm_password">Подтвердить пароль</string>
+    <string name="registration_signUp">Зарегистрироваться</string>
+    <string name="registration_signIn">Войти</string>
+    <string name="registration_signIn_title">Добро пожаловать</string>
+    <string name="registration_signUp_title">Создать аккаунт</string>
+</resources>

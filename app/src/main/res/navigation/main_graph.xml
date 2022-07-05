@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.bozor.fragments.ListFragment"
+        android:label="ListFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.bozor.fragments.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.example.bozor.fragments.ShopFragment"
+        android:label="ShopFragment" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.bozor.fragments.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_shopFragment"
+            app:destination="@id/shopFragment"
+            app:popUpTo="@+id/signInFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.bozor.fragments.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_shopFragment"
+            app:destination="@id/shopFragment"
+            app:popUpTo="@+id/signInFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

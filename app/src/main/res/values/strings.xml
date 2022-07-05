@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">bozor</string>
+    <string name="app_name" translatable="false">Bozor</string>
+
+    <!-- Registration -->
+    <string name="registration_signIn">Sign In</string>
+    <string name="registration_signUp">Sign Up</string>
+    <string name="registration_signIn_title">Welcome</string>
+    <string name="registration_signUp_title">Create Account</string>
+    <string name="registration_username">Username</string>
+    <string name="registration_password">Password</string>
+    <string name="registration_confirm_password">Confirm password</string>
+    <string name="registration_email">E-mail</string>
+
+    <!-- Menu -->
+    <string name="menu_shop">Shop</string>
+    <string name="menu_list">List</string>
+    <string name="menu_profile">Profile</string>
 </resources>
