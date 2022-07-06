@@ -8,6 +8,7 @@ import androidx.navigation.fragment.findNavController
 import ru.itis.bozor.R
 import ru.itis.bozor.databinding.FragmentSigninBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textfield.TextInputLayout
 
 class SignInFragment: Fragment(R.layout.fragment_signin) {
     private var _binding: FragmentSigninBinding? = null
@@ -22,8 +23,10 @@ class SignInFragment: Fragment(R.layout.fragment_signin) {
 
         with(binding){
             btSignIn.setOnClickListener {
-                if (tiSignInUsername.editText?.text.toString() == initPref()){
-                    Snackbar.make(view,initPref(),Snackbar.LENGTH_SHORT).show()
+                checkField(tiSignInUsername)
+                checkField(tiSignInPassword)
+                if (checkField(tiSignInUsername) && checkField(tiSignInPassword) &&
+                    (tiSignInUsername.editText?.text.toString() == initPref())){
                     findNavController().navigate(R.id.action_signInFragment_to_shopFragment)
                     bMenu.visibility = View.VISIBLE
                 } else Snackbar.make(view,"Error",Snackbar.LENGTH_SHORT).show()
@@ -33,6 +36,16 @@ class SignInFragment: Fragment(R.layout.fragment_signin) {
             }
         }
 
+    }
+
+    private fun checkField(view: TextInputLayout): Boolean {
+        if (view.editText?.text.toString().isEmpty()) {
+            view.error = getString(R.string.error_signUp)
+            return false
+        } else {
+            view.error = null
+            return true
+        }
     }
 
     private fun initPref(): String {

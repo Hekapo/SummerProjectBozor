@@ -15,4 +15,7 @@
     <string name="menu_shop">Shop</string>
     <string name="menu_list">List</string>
     <string name="menu_profile">Profile</string>
+
+    <!-- Error -->
+    <string name="error_signUp">*This field is required</string>
 </resources>
