@@ -5,9 +5,9 @@
     app:startDestination="@id/signInFragment">
 
     <fragment
-        android:id="@+id/listFragment"
-        android:name="ru.itis.bozor.fragments.ListFragment"
-        android:label="ListFragment" />
+        android:id="@+id/shopListFragment"
+        android:name="ru.itis.bozor.fragments.ShopListFragment"
+        android:label="ShopListFragment" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="ru.itis.bozor.fragments.ProfileFragment"
@@ -15,7 +15,11 @@
     <fragment
         android:id="@+id/shopFragment"
         android:name="ru.itis.bozor.fragments.ShopFragment"
-        android:label="ShopFragment" />
+        android:label="ShopFragment" >
+        <action
+            android:id="@+id/action_shopFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="ru.itis.bozor.fragments.SignInFragment"
@@ -34,9 +38,11 @@
         android:name="ru.itis.bozor.fragments.SignUpFragment"
         android:label="SignUpFragment" >
         <action
-            android:id="@+id/action_signUpFragment_to_shopFragment"
-            app:destination="@id/shopFragment"
-            app:popUpTo="@+id/signInFragment"
-            app:popUpToInclusive="true"/>
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="ru.itis.bozor.fragments.PurchaseFragment"
+        android:label="PurchaseFragment" />
 </navigation>

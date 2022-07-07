@@ -1,16 +1,27 @@
 package ru.itis.bozor
 
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import ru.itis.bozor.databinding.ActivityMainBinding
+import ru.itis.bozor.room.model.ShopListAdapter
+import ru.itis.bozor.room.model.ShopListListener
+import ru.itis.bozor.room.model.ShopListsService
+
+
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
     private lateinit var controller: NavController
+    private lateinit var preferences: SharedPreferences
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,11 +31,15 @@ class MainActivity : AppCompatActivity() {
         controller = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment).navController
         val bottomView = binding.bNav
         bottomView.setupWithNavController(controller)
+
+
     }
+
+
+
 }
 
-/* TODO 1) При первом входе в приложение сделать регистрационное окно
-        2) В нижней навигации есть 3 пункта: Shop, List и Profile
+/* TODO
         3) Shop - каталог продуктов разбитый на категории
         4) List открывает экран со списком покупок пользователя (создать список, посмотреть историю, отслеживать текущий)
         5) Profile - информация о пользователе:
