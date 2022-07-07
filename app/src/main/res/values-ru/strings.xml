@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Menu -->
+    <string name="menu_shop">Магаин</string>
+    <string name="menu_list">Список</string>
+    <string name="registration_username">Имя пользователя</string>
+    <string name="registration_password">Пароль</string>
+    <string name="registration_confirm_password">Подтвердить пароль</string>
+    <string name="registration_signUp">Зарегистрироваться</string>
+    <string name="registration_signIn">Войти</string>
+    <string name="registration_signIn_title">Добро пожаловать</string>
+    <string name="registration_signUp_title">Создать аккаунт</string>
+    <string name="error_signUp">*Обязательное поле</string>
+    <string name="error_signUp_password">*Пароли не совпадают</string>
+    <string name="error_signIn_username">*Неправильное имя пользователя</string>
+    <string name="error_signIn_password">*Неправильный пароль</string>
+</resources>
