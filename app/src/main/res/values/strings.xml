@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">bozor</string>
+    <string name="app_name" translatable="false">Bozor</string>
+
+    <!-- Registration -->
+    <string name="registration_signIn">Sign In</string>
+    <string name="registration_signUp">Sign Up</string>
+    <string name="registration_signIn_title">Welcome</string>
+    <string name="registration_signUp_title">Create Account</string>
+    <string name="registration_username">Username</string>
+    <string name="registration_password">Password</string>
+    <string name="registration_confirm_password">Confirm password</string>
+    <string name="registration_email" translatable="false">E-mail</string>
+
+    <!-- Menu -->
+    <string name="menu_shop" translatable="false">Shop</string>
+    <string name="menu_list" translatable="false">List</string>
+    <string name="menu_profile" translatable="false">Profile</string>
+
+    <!-- Buttons -->
+    <string name="floating_buy" translatable="false">Buy</string>
+    <string name="floating_add" translatable="false">Add</string>
+
+    <!-- Dialog -->
+    <string name="dialog_shopList_title" translatable="false">New shop list</string>
+
+
+    <!-- Error -->
+    <string name="error_signUp">*This field is required</string>
+    <string name="error_signUp_password">*Passwords don`t match</string>
+    <string name="error_signIn_username">*Incorrect username</string>
+    <string name="error_signIn_password">*Incorrect password</string>
 </resources>
