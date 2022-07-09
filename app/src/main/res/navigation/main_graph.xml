@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/shopListFragment"
+        android:name="ru.itis.bozor.fragments.shoplist.ShopListFragment"
+        android:label="ShopListFragment" >
+        <action
+            android:id="@+id/action_shopListFragment_to_listInformation"
+            app:destination="@id/listInformation" />
+        <action
+            android:id="@+id/action_shopListFragment_self"
+            app:destination="@id/shopListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.itis.bozor.fragments.profile.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="ru.itis.bozor.fragments.shop.ShopFragment"
+        android:label="ShopFragment" >
+        <action
+            android:id="@+id/action_shopFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="ru.itis.bozor.fragments.sign.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_shopFragment"
+            app:destination="@id/shopFragment"
+            app:popUpTo="@+id/signInFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="ru.itis.bozor.fragments.sign.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="ru.itis.bozor.fragments.purchase.PurchaseFragment"
+        android:label="PurchaseFragment" />
+    <fragment
+        android:id="@+id/listInformation"
+        android:name="ru.itis.bozor.fragments.listinformation.ListInformationFragment"
+        android:label="ListInformation" />
+</navigation>
